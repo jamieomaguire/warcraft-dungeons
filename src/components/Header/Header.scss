@@ -2,11 +2,11 @@
 
 .header {
   background-image: linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.8));
-  padding: $site-padding;
+  padding: $spacing;
   min-height: 60px;
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: $spacing;
 }
 
 .title {

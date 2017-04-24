@@ -4,9 +4,6 @@ import styles from './Zone.scss'
 
 // Takes all the Warcraft zone data as props and displays the interesting parts
 
-// aria-expanded='false' - aria-hidden='true'
-// aria-expanded='true' - aria-hidden='false'
-
 // Snippet taken from W3 schools
 const toggleAccordion = (event) => {
   event.target.classList.toggle(styles.active)
@@ -27,7 +24,7 @@ const Zone = (props) => (
     <button onClick={toggleAccordion} className={styles.accordion} type='button'>{props.name}</button>
     <div className={styles.panel} aria-expanded='false' aria-hidden='true'>
       <h3 className={styles.name}>{props.name}</h3>
-      <p>{props.description}</p>
+      <p>{props.description ? props.description : 'No description available :('}</p>
       <p><span className={styles.stats}>Min Level:</span> {props.advisedMinLevel}</p>
       <p><span className={styles.stats}>Max Level:</span> {props.advisedMaxLevel}</p>
       <p><span className={styles.stats}>Number of players:</span> {props.numPlayers}</p>
