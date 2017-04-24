@@ -1,9 +1,9 @@
-@import '../../vars';
+@import '../../scss/vars';
 
 .title {
   margin-left: $spacing;
   font-weight: 100;
-  @media all and (min-width: 35em) {
+  @media all and (min-width: $breakpoint) {
     font-size: 1.5rem;
   }
 }

@@ -4,7 +4,7 @@ import styles from './Zone.scss'
 
 // Takes all the Warcraft zone data as props and displays the interesting parts
 
-// Snippet taken from W3 schools
+// Snippet adapted from W3 schools
 const toggleAccordion = (event) => {
   event.target.classList.toggle(styles.active)
   let panel = event.target.nextElementSibling

@@ -1,4 +1,4 @@
-@import '../../vars';
+@import '../../scss/vars';
 
 .header {
   background-image: linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.8));
@@ -14,7 +14,7 @@
   color: #fff;
   font-weight: 100;
 
-  @media all and (min-width: 35em) {
+  @media all and (min-width: $breakpoint) {
     font-size: 3rem;
   }
 }
