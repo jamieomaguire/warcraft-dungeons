@@ -1,0 +1,15 @@
+@import '../../vars';
+
+.header {
+  background-image: linear-gradient(to left, rgba(0,0,0,.5), rgba(0,0,0,.8));
+  padding: $site-padding;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 3rem;
+  color: #fff;
+}
