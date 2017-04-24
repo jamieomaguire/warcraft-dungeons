@@ -1,7 +1,6 @@
 .zone {
   border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  line-height: 1.5;
 }
 .zone:last-of-type {
   border-bottom: 1px solid #ccc;
@@ -9,13 +8,14 @@
 }
 
 .accordion {
+  background: none;
   display: block;
   width: 100%;
   border: none;
-  background-color: #ddd;
-  padding: 1em;
+  color: #bbb;
+  font-size: 1em;
+  padding: 1rem;
   cursor: pointer;
-  color: #444;
   text-align: left;
   transition: all 300ms ease-out;
 }
@@ -23,12 +23,21 @@
 .accordion:focus,
 .accordion:hover,
 .accordion.active {
-  background-color: #aaa;
+  background-color: rgba(0,0,0,.5);
+  color: #f1f1f1;
 }
 
 .accordion:after {
   content: '\002B';
-  color: #777;
+  color: #f1f1f1;
+  font-weight: bold;
+  float: right;
+  margin-right: 1em;
+}
+
+.accordion.active:after {
+  content: '\2212';
+  color: #f1f1f1;
   font-weight: bold;
   float: right;
   margin-right: 1em;
@@ -36,13 +45,17 @@
 
 .panel {
   display: block;
-  background-color: #f1f1f1;
+  background-color: rgba(0,0,0,.5);
   padding: 0 1em;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 
-.active {
-  
+.name {
+
+}
+
+.stats {
+  font-weight: bold;
 }

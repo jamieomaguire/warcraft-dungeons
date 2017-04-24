@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-// import styles from './Expansions.scss'
+import styles from './Main.scss'
 import ZoneSection from '../../components/ZoneSection/ZoneSection'
 import Loading from '../../components/Loading/Loading'
 
@@ -44,7 +44,7 @@ export default class Expansions extends Component {
     // Load the main content after the axios promise is resolved
     if (this.state.zones.length > 0) {
       return (
-        <div>
+        <div className={styles.container}>
           <ZoneSection title='Dungeons' zones={dungeons} />
           <ZoneSection title='Raids' zones={raids} />
         </div>

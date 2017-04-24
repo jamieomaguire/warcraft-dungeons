@@ -3,5 +3,8 @@
 .container {
   max-width: $site-width;
   // padding: $site-padding;
+  background-color: #333;
+  color: #eee;
+  background-color: rgba(0,0,0,.6);
   margin: 0 auto;
 }

@@ -13,21 +13,25 @@ const toggleAccordion = (event) => {
   let panel = event.target.nextElementSibling
   if (panel.style.maxHeight) {
     panel.style.maxHeight = null
+    panel.setAttribute('aria-expanded', 'false')
+    panel.setAttribute('aria-hidden', 'true')
   } else {
     panel.style.maxHeight = panel.scrollHeight + 'px'
+    panel.setAttribute('aria-expanded', 'true')
+    panel.setAttribute('aria-hidden', 'false')
   }
 }
 
 const Zone = (props) => (
   <li className={styles.zone} aria-labelledby={props.name}>
-    <button onClick={toggleAccordion}className={styles.accordion} type='button'>{props.name}</button>
-    <div className={styles.panel}>
-      <h3>{props.name}</h3>
+    <button onClick={toggleAccordion} className={styles.accordion} type='button'>{props.name}</button>
+    <div className={styles.panel} aria-expanded='false' aria-hidden='true'>
+      <h3 className={styles.name}>{props.name}</h3>
       <p>{props.description}</p>
-      <p>Min Level: {props.advisedMinLevel}</p>
-      <p>Max Level: {props.advisedMaxLevel}</p>
-      <p>Number of plays: {props.numPlayers}</p>
-      <p>Location: {props.location.name}</p>
+      <p><span className={styles.stats}>Min Level:</span> {props.advisedMinLevel}</p>
+      <p><span className={styles.stats}>Max Level:</span> {props.advisedMaxLevel}</p>
+      <p><span className={styles.stats}>Number of players:</span> {props.numPlayers}</p>
+      <p><span className={styles.stats}>Location:</span> {props.location.name}</p>
     </div>
   </li>
 )
